@@ -1,10 +1,3 @@
-#1 Total sales, profit and number of transactions
-#2 monthly sales trends by region
-#3 sales comparison across product categories
-#4 region wise contribution to overall sales
-#5 the relationship between profit and categories
-
-#mydash1.py
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -46,8 +39,7 @@ with col1:
     st.metric("💰Total Sales",value=filtered["Sales"].sum())
 with col2:
     st.metric("Total Profit",value=filtered["Profit"].sum())
-    
-#start -> anaconda prompt -> streamlit run *filename*.py -> enter    
+     
 
 st.markdown("### Sales Analysis")
 
@@ -72,6 +64,7 @@ with col4:
                     size="Sales",hover_data=["Month"],
                     title="Sales vs Profit")
     st.plotly_chart(fig4,use_container_width=True)
-    
+
+#start -> anaconda prompt -> streamlit run *filename*.py -> enter   
 
     
